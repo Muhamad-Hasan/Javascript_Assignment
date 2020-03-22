@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+</head>
+<body>
+    <input type=text id="no" placeholder="S.no">
+    <input type=text id="des" placeholder="description">
+    <input type=text id="date" placeholder="Date">
+    <button type=submit  onclick="count()";>Add</button>
+
+
+        <script >
+            function ToDO(no , description ,date)
+            {
+                this.no = no;
+                this.description = description;
+                this.date = date;
+
+            }
+            function create()
+            {
+                var ToDO1 = new ToDO(no ,des , date);
+            }
+            
+            var no = document.getElementById("no");
+            var des = document.getElementById("des");
+            var date = document.getElementById("date");
+
+            alert(c);
+        </script>
+</body>
+</html>

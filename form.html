@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            #form{border:1px solid black;
+                  width:50%;}
+            
+            #main{text-align: center;
+                  
+                  } 
+            #text{font-size: 20px;
+                }
+            .hid {display:none;}
+            .bg {font-size: 1000px;}
+        </style>
+    </head>
+    <body>
+        <forM onSubmit="checkName('name');checkDate('date');">
+        <div id="form">
+            <h1 id="main"><b>Registration form</b></h1>
+            <b id="t" onMouseOver="makeBig();" >Name : </b>
+            <input type="Text" size="30" id="name" onFocus="this.style.backgroundColor='yellow';" onBlur="this.style.backgroundColor='white'; makeInvisible();">
+            <b id="text">Date Of Birth :</b>
+            <input type="Text" size="10" id="date" onFocus="this.style.backgroundColor='yellow';" onBlur="this.style.backgroundColor='white'; checkAge();">
+       
+            <br>
+            <b id="text"> Age :</b>
+            <input type="Text" id="show" size="30" onFocus="this.style.backgroundColor='yellow';" onBlur="this.style.backgroundColor='white';">
+            <input type="submit" value="submit" onclick="makeBig();" >
+        </div>
+        </forM>
+        <script>
+            
+            function checkName(fieldId)
+            {
+                var fullName=document.getElementById("name").value;
+                //for(var i=0; i<fullName.length; i++)
+                var index=fullName.indexOf(" ");
+                if(index==-1|| fullName.length<5)
+                {
+                    alert("Please write your Full Name");
+                }
+            }
+
+            function checkDate(fieldId)
+            {
+                var fullDate=document.getElementById("date").value;
+                //for(var i=0; i<fullName.length; i++)
+                //var index=fullName.indexOf(" ");
+                fullDate.charAt(3)=document.getElementById("date").value="-";
+                
+            }
+            function checkAge()
+            {
+                var d=document.getElementById("date").value;
+                //for (let i = 0; i < date.length; i++) {
+                var index=d.lastIndexOf("/");
+                //alert(index);
+                var date=d.slice(index+1,index+5);
+                //alert(date);
+                var age=0;
+                switch (date)
+                {   
+                    case "1995":
+                    age =2018-1995;
+                    break;
+                    case "1996":
+                    age=2019-1996;
+                    break;
+                    case "1997" :
+                    age = 2018-1997;
+                    break;
+                    case "1998" :
+                    age=2018-1998;
+                    break;
+                    case "1999" :
+                    age=2018-1999;
+                    break;
+                    case "2000":
+                    age =2018-2000;
+                    break;
+                    case "2005":
+                    age= 2018-2005;
+                    break;
+                }
+                    document.getElementById("show").value = age;
+                }
+
+                function makeInvisible()
+                {
+                    document.getElementById("name").className = "hid";
+                }
+                function makeBig()
+                {
+                    document.getElementById("t").style.fontSize = "30px";
+                }
+
+        </script>
+    </body>
+</html>

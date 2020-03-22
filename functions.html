@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <script>
+        /*function power(a , b)
+        {
+            var result=1;
+            for(var i=0; i <=b; i++)
+            {
+                result = result * a;
+            }
+        return result;
+        }
+    
+        var p =power(2,3);
+        console.log(p);
+    //**********************************leap year
+
+        function year(y)
+        {
+            if( y % 4===0 && y % 100!== 0 || y % 400 ===0)
+            {
+                alert("leap month");
+            }
+            else{alert("not a leap");}
+        }
+        year(2020);
+        
+        */
+        
+        //*********************area*********************
+        /*var result=0;
+        function s(a,b,c)
+            {
+                result=(a+b+c)/2;
+                return result ;
+            }
+        function area(a,b,c)
+        {
+            var ar=result*(result-a)*(result-b)*(result-c);
+            document.write(ar);
+            return ar;
+        }
+        
+        s(6,4,6);
+        area(6,4,6);
+        */
+    // marksheet
+    
+    /*function average(a,b,c)
+    {
+        var avg=(a+b+c)/3;
+        document.write(avg);
+        return avg;
+    }
+    function percentage(a,b,c)
+    {
+        var per = ((a+b+c)/300)*100;
+        document.write(per);
+        return per;
+    }
+    function main(maths , sci,chem)
+    {
+        average(maths , sci,chem);
+        document.write("********");
+        percentage(maths ,sci ,chem);
+    }
+
+    main(75,86,94);
+    */
+///*****************indexOf****************
+    /*function indexof(i,message)
+    {
+        for (let index = 0; index < message.length; index++) {
+            if(message.slice(index,index+1)===i)
+            {
+                document.write("index Of "+i+" is "+(index+1));
+                index=message.length;
+            }               
+        }
+    }
+
+    indexof("s","hassan");*/
+//*********************novowels/*********************
+ /*   function noVowels(sentence)
+    {
+        for (let index = 0; index < sentence.length; index++) 
+        {
+            if(sentence.slice(index, index+1)==="a")
+            {
+               sentence=sentence.slice(0,index)+sentence.slice(index+1);
+                
+            }
+            if(sentence.slice(index, index+1)==="e")
+            {
+               sentence=sentence.slice(0,index)+sentence.slice(index+1);
+                
+            }
+            if(sentence.slice(index, index+1)==="i")
+            {
+               sentence=sentence.slice(0,index)+sentence.slice(index+1);
+                
+            }
+            if(sentence.slice(index, index+1)==="o")
+            {
+               sentence=sentence.slice(0,index)+sentence.slice(index+1);
+                
+            }
+            if(sentence.slice(index, index+1)==="u")
+            {
+               sentence=sentence.slice(0,index)+sentence.slice(index+1);
+                
+            }
+        }
+        document.write(sentence);
+    }
+    noVowels("hassan is my best friend and he can jumps over umberella");
+*/
+/*
+    function checkVowel(message)
+    {
+        var vowel="";
+        var vowel="";
+        var present=0;
+        for (let index = 0; index < message.length; index++) {
+            if(isvowel(message.charAt(index)))
+            {
+                
+                found++
+            }
+            else{found=0;}
+            if(found==2)
+            {
+                vowel1=message.charAt(index-1);
+                vowel2=message.charAt(index);
+                document.write(vowel1+vowel2 +" ");
+                present++;
+            }
+        }
+        document.write("\npresent times :"+present);
+    }
+    function isvowel(alphabet)
+    {
+        switch (alphabet)
+        {
+            case "a" :
+            case "e" :
+            case "i" :
+            case "o" :
+            case "u" :
+                return 1;
+            default :
+                return 0;    
+        }
+    }
+
+    checkVowel("Pleases read this application and give me gratuity");
+    */
+
+    //********************overtime************************
+/*
+    function overtime(hrs)
+    {
+        if(hrs>40){
+        var ovt=12*hrs;
+        document.write("overtime :"+ovt.toFixed(2));
+        }
+        else {document.write("hrs less than 40");}
+    }
+    overtime(55.3);
+    */
+
+    // *************************bank*********************
+
+    function bank()
+    {
+        var amount=prompt("enter a amount");
+        var thousand=amount/1000;
+        var hundreds=(amount%1000)/100;
+        var fifty=((amount%1000)%100)/50;
+        var ten=((((amount%1000)%100)%50)/10);
+        var five=(((((amount%1000)%100)%50)%10)/5);
+        var unit=((((((amount%1000)%100)%50)%10)%5)/1);
+        document.write("you have "+Math.floor(thousand)+" thousand "+Math.floor(hundreds)+" hundreds, "+Math.floor(fifty)+" fifty and "+Math.floor(ten)+" ten notes "+Math.floor(five)+" five coins "+Math.floor(unit)+" one coins");
+
+    }
+    bank();
+    </script>
+</body>
+</html>

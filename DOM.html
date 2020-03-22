@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   
+</head>
+<body>
+    <div id="div1"
+        ><h1 id="head">heading</h1
+        ><p id="div2">Imran khan is prime minister of Pakistan. </p
+        ><p  class="p2">nawaz sharif was the prime minister of Pakistan. </p
+        ><p>Aun hassan will prime minister of Pakistan. </p
+        ><img src="1.png"    
+    ></div>
+
+    <script >
+            var main =document.getElementById("div1");  //div
+            
+            var first=main.childNodes[2];  //imran
+            var second =main.firstChild;   //nawaz
+            var third= main.lastChild;     // aun
+            var get=first.innerHTML;      //
+            var get1=second.innerHTML;
+            var get2 = third.innerHTML;
+            var kid=document.getElementById("div2");   //p imran
+            var parent = kid.parentNode;  //div1
+            var p = parent.innerHTML;     
+            var next=kid.nextSibling;     //aun
+            var n=next.innerHTML;
+            //var ptype= get1.nodeType;
+            var privios=next.previousSibling;   //imran
+            var ntype= privios.nodeType;  //
+             
+            var k=document.getElementById("head");
+            var ame= third.nodeName; 
+            var value = k.nodeValue;
+            console.log(ame);
+
+            if (third.nodeName.toLowerCase() === "img") 
+            {
+                console.log("yes");
+            }
+            
+            var nodeList =main.childNodes;
+            var nodeLength=nodeList.length;
+            var count=0;
+            for (let i = 0; i < nodeLength; i++) {
+               if(nodeList[i].nodeName.toLowerCase() === "h1")
+               {
+                   count++;
+
+               }
+                
+            }
+            
+            var hasClass = kid.hasAttribute("class");
+            console.log(hasClass); //it giver answer in bolean  
+            
+            var getClass = main.getAttribute("id");
+            console.log(getClass); //it gives the value of yhe attribute that we asssign in html.
+
+            main.setAttribute("Class", "kick"); 
+            var check = main.hasAttribute("class");
+            console.log(check);
+            var noOfItems=main.attributes.length; //it gives the no  of attributes of any node
+            console.log(noOfItems);            
+            
+            //  for creating a new paragraph 
+            var nodeToAdd = document.createElement("p");
+            nodeToAdd.setAttribute("font-size","100px");
+            nodeToAdd.setAttribute("id","new");
+            var nodeContent =document.createTextNode("Muhammad is a good speaker");
+            nodeToAdd.appendChild(nodeContent);
+            main.appendChild(nodeToAdd);
+            //these lines show the paragh as a first child
+            var paragraph = main.childNodes[1];
+            main.insertBefore(nodeToAdd , paragraph);
+
+
+            
+            // for creating  a new image element tag
+
+            var addImage = document.createElement("img")
+            addImage.setAttribute("border","1px");
+            addImage.setAttribute("id","image");
+            addImage.setAttribute("src","3.png");
+            main.appendChild(addImage);
+            // this code remove the selected childnode
+            main.removeChild(addImage);
+
+
+
+
+    </script>
+</body>
+</html>

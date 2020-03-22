@@ -1,0 +1,506 @@
+<!Doctype html>
+<html>
+
+<head>
+    <style>
+        #main{ background-color:black;
+                width:101.3%;
+                height:656px;
+                margin:-10px;
+                padding:0;
+            }
+        #dicebutton {height:40px;
+                    width:145px;
+                    position:absolute;
+                    left:35px;
+                    top:235px;}
+
+        #place {border:3px solid red;
+               position:absolute;
+               left:350px;
+               top:10px;
+               height:580px;
+               width:930px;}
+        td {border:1px solid red;
+            height:100px;
+            width:100px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color:black;
+            background-color: burlywood;
+            }
+            
+       
+    </style>
+
+<script>
+    var green=0;
+    var blue=0;
+    var c=0;
+    var dice=0;
+    var lastGreen=0;
+    var lastBlue=0;
+    function rollDice()
+    {
+    var random=Math.random();
+    var improvedNum=(random*6)+1;
+    dice=Math.floor(improvedNum);
+    if(green<26 || blue<26)
+    {
+    if(dice==1)
+    {
+        document.getElementById("dice").src="1.png";
+    }
+    else if(dice==2)
+    {
+        document.getElementById("dice").src="2.png";
+    }
+    else if(dice==3)
+    {
+        document.getElementById("dice").src="3.png";
+    }
+    else if(dice==4)
+    {
+        document.getElementById("dice").src="4.png";
+    }
+    else if(dice==5)
+    {
+        document.getElementById("dice").src="5.png";
+    }
+    else if(dice==6)
+    {
+        document.getElementById("dice").src="6.png";
+    }
+    }
+    }
+    function count()
+    {
+        c+=1;
+       // alert(c);
+        return c;
+    }
+    function colorChange(c)
+    {
+        if(c%2==0  && green<=25)
+        {
+            
+            green+=dice;
+            
+
+        // c.style.backgroudColor='green';
+          // document.getElementsById("1");
+
+            //alert("Green"+green);
+        }
+        else
+        {
+            blue+=dice;
+            //document.getElementById("+green+").color='green';
+            
+            //alert("Blue"+blue);
+
+        }
+        {
+        max(blue);
+        if(blue==1)
+        {
+            white();
+            place.rows[0].cells[0].style.backgroundColor="blue";  
+        }
+        else if(blue==2)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[0].cells[1].style.backgroundColor="blue";
+        }
+        else if(blue==3)
+        {
+            white();
+            //alert("green "+green);
+            
+            place.rows[0].cells[2].style.backgroundColor="blue";//document.getElementById("three").s = "hassan.jpg";
+            //document.getElementById("three").style.backgroudColor = "green";
+            //document.getElementBytr("3").src="hassan.png";
+        }
+        else if(blue==4)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[0].cells[3].style.backgroundColor="blue";
+        }
+        else if(blue==5)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[0].cells[4].style.backgroundColor="blue";
+        }
+        else if(blue==6)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[0].style.backgroundColor="blue";
+        }
+        else if(blue==7)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[1].style.backgroundColor="blue";
+        }
+        else if(blue==8)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[2].style.backgroundColor="blue";
+        }
+        else if(blue==9)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[3].style.backgroundColor="blue";
+        }
+        else if(blue==10)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[4].style.backgroundColor="blue";
+        }
+        else if(blue==11)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[0].style.backgroundColor="blue";
+        }
+        else if(blue==12)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[1].style.backgroundColor="blue";
+        }
+        else if(blue==13)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[2].style.backgroundColor="blue";
+        }
+        else if(blue==14)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[3].style.backgroundColor="blue";
+        }
+        else if(blue==15)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[4].style.backgroundColor="blue";
+        }
+        else if(blue==16)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[0].style.backgroundColor="blue";
+        }
+        else if(blue==17)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[1].style.backgroundColor="blue";
+        }
+        else if(blue==18)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[2].style.backgroundColor="blue";
+        }
+        else if(blue==19)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[3].style.backgroundColor="blue";
+        }
+        else if(blue==20)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[4].style.backgroundColor="blue";
+        }
+        else if(blue==21)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[4].cells[0].style.backgroundColor="blue";
+        }
+        else if(blue==22)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[4].cells[1].style.backgroundColor="blue";
+        }
+        else if(blue==23)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[4].cells[2].style.backgroundColor="blue";
+        }
+        else if(blue==24)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[4].cells[3].style.backgroundColor="blue";
+        }
+        else if(blue==25)
+        {
+            white();
+             place.rows[4].cells[4].style.backgroundColor="blue";
+            
+             alert("Congragulations! Blue Wins.");
+            
+             
+        }
+        else if(blue>25)
+        {
+            
+            alert("oops!This number is large.");
+             //place.rows[4].cells[4].style.backgroundColor="green";
+        }
+        }   
+    }
+
+        function max(p)
+        {
+            p=p<25;
+        }
+        lastDice=green-dice;
+        function checkGreen(){
+        if(green==1)
+        {
+            white();
+            place.rows[0].cells[0].style.backgroundColor="green";  
+        }
+        if(green==2)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[0].cells[1].style.backgroundColor="green";
+        }
+        if(green==3)
+        {
+            white();
+            //alert("green "+green);
+            
+            place.rows[0].cells[2].style.backgroundColor="green";//document.getElementById("three").s = "hassan.jpg";
+            //document.getElementById("three").style.backgroudColor = "green";
+            //document.getElementBytr("3").src="hassan.png";
+        }
+        if(green==4)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[0].cells[3].style.backgroundColor="green";
+        }
+        if(green==5)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[0].cells[4].style.backgroundColor="green";
+        }
+        if(green==6)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[0].style.backgroundColor="green";
+        }
+        if(green==7)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[1].style.backgroundColor="green";
+        }
+        if(green==8)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[2].style.backgroundColor="green";
+        }
+        if(green==9)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[3].style.backgroundColor="green";
+        }
+        if(green==10)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[1].cells[4].style.backgroundColor="green";
+        }
+        if(green==11)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[0].style.backgroundColor="green";
+        }
+        if(green==12)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[1].style.backgroundColor="green";
+        }
+        if(green==13)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[2].style.backgroundColor="green";
+        }
+        if(green==14)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[3].style.backgroundColor="green";
+        }
+        if(green==15)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[2].cells[4].style.backgroundColor="green";
+        }
+        if(green==16)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[0].style.backgroundColor="green";
+        }
+        if(green==17)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[1].style.backgroundColor="green";
+        }
+        if(green==18)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[2].style.backgroundColor="green";
+        }
+        if(green==19)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[3].style.backgroundColor="green";
+        }
+        if(green==20)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[3].cells[4].style.backgroundColor="green";
+        }
+        if(green==21)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[4].cells[0].style.backgroundColor="green";
+        }
+        if(green==22)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[4].cells[1].style.backgroundColor="green";
+        }
+        if(green==23)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[4].cells[2].style.backgroundColor="green";
+        }
+        if(green==24)
+        {
+            white();
+            //alert("green "+green);
+             place.rows[4].cells[3].style.backgroundColor="green";
+        }
+        if(green==25)
+        {
+            white();
+             place.rows[4].cells[4].style.backgroundColor="Red";
+            
+             alert("Congragulations! green Wins.");
+            
+             
+        }
+        if(green>25)
+        {
+            
+            alert("oops!This number is large.");
+             //place.rows[4].cells[4].style.backgroundColor="green";
+        }
+
+    }
+       function greenRemove()
+       {
+        {
+            for(var x=0; x<5; x++)
+                {
+                    for(var j=0; j<5; j++)
+                    {
+                        place.rows[x].cells[j].style.backgroundColor=" burlywood";
+                    }
+                }
+        }
+
+       }
+         
+    
+     
+    
+    
+</script>
+</head>
+<body>
+    <div id="main">
+        <div id="thumb">
+        
+            <img id="dice" src="download.png">
+        </div>
+        <input type="button" Value="Roll A Dice"  id="dicebutton" onClick="rollDice(); count();  colorChange(c); checkGreen(); " onFocus="this.style.backgroudColor='red';"> 
+        <table id="place">
+            <tr>
+                <td class="one">1</td>
+                <td id="two">2</td>
+                <td id="three">3</td>
+                <td id="four">4</td>
+                <td id="five">5</td>
+            </tr>
+            <tr>
+                    <td id="6">6</td>
+                    <td id="7">7</td>
+                    <td id="8">8</td>
+                    <td id="9">9</td>
+                    <td id="10">10</td>
+                </tr>
+                <tr>
+                        <td id="11">11</td>
+                        <td id="12">12</td>
+                        <td id="13">13</td>
+                        <td id="14">14</td>
+                        <td id="15">15</td>
+                    </tr>
+                    <tr>
+                            <td id="16">16</td>
+                            <td id="17">17</td>
+                            <td id="18">18</td>
+                            <td id="19">19</td>
+                            <td id="20">20</td>
+                    </tr>
+                    <tr>
+                            <td id="21">21</td>
+                            <td id="22">22</td>
+                            <td id="23">23</td>
+                            <td id="24">24</td>
+                            <td id="25">25</td>
+                        </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

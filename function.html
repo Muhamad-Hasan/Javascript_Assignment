@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<body>
+    <script>
+        function tellDate()
+        {
+            var now=new Date();
+            var month=now.getMonth();
+            document.write(now.getDate()+"/"+(parseInt(month)+1)+"/"+now.getFullYear());
+        }
+        tellDate();
+
+        function lawn(person,items)
+        {
+            var prize;
+            if(person>100 && items>5)
+            {
+                prize=person*100;
+            }
+            else if(person<100 && items>5)
+            {
+                prize=person*120;
+            }
+            else if(person<100 && items<5)
+            {
+                prize=person*110;
+            }
+            else if(person>100 && items<5)
+            {
+                prize=person*180;
+            }
+            document.write("<br>"+prize);
+            return prize;
+        }
+            lawn(200,8);
+            //document.write(prize);
+     </script>
+</body>
+</html>

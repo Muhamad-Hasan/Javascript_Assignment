@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ludo</title>
+    <style>
+    .left {
+        width: 200px;
+        float: left;
+    }
+    .roll-bg {width: 100px; height: 100px; padding: 5px; background: #333; text-align: center; color: #fff;}
+    .right { width: 600px; float: left; }
+    .container { width: 520px; height: 500px; background: #e7e7e7; }
+    .card { width: 100px; height: 100px; background: #ccc; display: inline-block;border: 1px solid #000;}
+    .card.player1 {background: green;}
+    .card.player2 {background: blueviolet;}
+    </style>
+</head>
+<body>
+    <div class="left">
+        <div class="roll-bg"></div>
+        <button id="roll">Click</button>
+    </div>
+    <div class="right">
+        <div class="container"></div>
+    </div>
+    <script>
+        var c = 0;
+        var p = 0;
+        document.getElementById('roll').addEventListener('click', function(e) {
+            var num = Math.floor((Math.random() * 6) + 1);
+            var roll_bg = document.querySelector('.roll-bg');
+            var container = document.querySelector('.container');
+            if(c == 0) {
+                for (let i = 0; i < 25; i++) {
+                    container.innerHTML += '<div class="card"><div>'               
+                }
+                this.innerHTML = 'Start';
+                c++;
+            }
+            roll_bg.innerHTML = num;
+            this.innerHTML = 'Roll';
+            if(p == 0) {
+                container.children[num-1].classList.add('player1');
+                p = 1;
+            } else {
+                var cur = findPlayer(p);
+                p = (p == 1) ? 2 : 1;
+                container.children[ cur + num ].classList.add('player' + p);
+                
+            }
+        });
+
+        function findPlayer(pid) {
+            var container = document.querySelector('.container');
+            var ind = 0;
+            for (let index = 0; index < container.childElementCount; index++) {
+                var element = container.children[index];
+                
+                if(element.getAttribute('class').indexOf(pid) != -1) {
+                    ind = index;
+                    // element.setAttribute('class', 'card');
+                    element.classList.remove(pid)
+                    break;
+                }
+            }
+            return ind;
+        }
+    </script>
+</body>
+</html>

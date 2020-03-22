@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+           <script>
+            /*document.write("Provinces of Pakistan :<br>");
+
+            var province={};
+            for(var i=0; i<4; i++ )
+            {
+                province[i]=prompt("Enter the name of province of Pakistan");
+                var firstchar=province[i].slice(0,1);
+                
+                firstchar=firstchar.toUpperCase();
+                //document.write(firstchar);
+                firstchar="<b>"+firstchar+"</b>";
+                //document.write(firstchar);
+                var length=province[i].length;
+                //document.write(length);
+                var otherchar=province[i].slice(1,length);
+                otherchar=otherchar.toLowerCase();
+                //document.write(otherchar);
+                var fullchar=firstchar + otherchar;
+                document.write(fullchar+"<br>");
+
+            }
+            */
+            /*var line ="karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.";
+            
+            for (var i=0; i<cv.length; i++)
+            {
+                if(line.slice(i ,i+7)==="karachi")
+                {
+                   //document.write("right");
+
+                var ind=line.indexOf("karachi");
+                //document.write(ind);
+                line=line.slice(0,i)+" Islamabad "+line.slice(i+7);
+                }
+
+            }
+            document.write(cv);
+*/
+            /*var q1="i have done my matriculation from Saint domincs.";
+            var q2;
+            for(var i=0; i<q1.length; i++)
+            {
+                if(q1.slice(i,i+13)==="matriculation")
+                {
+                   document.write("right");
+                    q2=q1.slice(0,i)+" Intermidiate "+q1.slice(i+13);
+                    
+                    
+                }
+                
+                if(q1.slice(i,i+13)==="Saint domincs")
+                    {
+                    document.write("rt");
+                    q2=q1.slice(0,i)+" SRE Majeed "+q1.slice(i+13);
+                    }
+                
+            }
+            document.write(q2);
+               */ 
+            /*var name=prompt("Enter name :");
+            //var secondname=prompt("Enter second name :");
+            var firstchar=name.charAt(0);
+            document.write(firstchar);
+            var lastchar=name.charAt(name.length-1);
+            document.write(lastchar);
+
+            if(name.charAt(name.length-1)==="!")
+            {
+                alert("Exclarametry sign is found");
+            }*/
+
+            /*var line ="karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.karachi is a capital city of Pakistan.";
+            
+            var newline=line.replace("karachi","Islamabad");
+            var nextline=line.replace(/karachi/g ,"Islamabad");
+            document.write(newline)
+            document.write(nextline);*/
+
+            //27 dice
+            function showPic(id ,s) {
+                document.getElementById(id).HTMLImageElement(src="1");
+                }
+            var bigdecimal=Math.random();
+            var improvednum=(bigdecimal * 6) + 1;
+            var numOfStar=Math.floor(improvednum);
+            document.write(numOfStar);
+            if(numOfStar==1)
+            {
+                var img = new Image();
+                var div = document.getElementById("dice1");
+
+                img.onload = function() {
+                div.appendChild(img);
+            };
+
+                img.src = "1.jpg";
+                document.write("<b>one<b/>");
+                    /*<HTMLImageElement
+                     src="1.png" id="dice1">
+*/
+            }
+            else if(numOfStar==2)
+            {
+                document.write("two");
+                showPic("dice2", "2");
+
+            }
+            // current month
+            /*var month=["Jan","Feb","mar" ,"apr" ,"may","jun","jul","Aug","spt","oct","nov","dec"];
+            var rightnow=new Date();
+            var theDay=rightnow.getMonth();
+            document.write(month[theDay]);
+*/
+        </script>
+
+         
+        
+</body>
+</html>

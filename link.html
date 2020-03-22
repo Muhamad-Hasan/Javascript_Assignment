@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<body>
+
+    <a href="javaScript:void(0)" onclick="first();">Enter a First Number</a>
+    <a href="javaScript:void(0)" onclick="second();">Enter a Second Number</a>
+    <a href="javaScript:void(0)" onclick="result();">Click for Result</a>
+    <input type="button" Value="Click" onclick="first();">
+    <img src="1.png" onmouseover="src='2.png'" onMouseout='src="1.png"'> 
+    <h1 onMouseover="alert('heading');">heading 1</h1>   
+    <a href="#" ><img src="1.png"></a>
+    <p id="Karachi" onmouseover="expand();">karachi is the capital</p>
+    <img src="1.png" onclick="alert('Muhammad Hassan');">
+    <p id="loris" onMouseover="expand();">Slow Loris: Mouse over for more info</p>
+
+    <script>
+    function first()
+    {
+        var firstNumber=prompt("Enter a first Number :");
+    }    
+    function second()
+    {
+        var secondNumber=prompt("Enter a Second Number :");
+    }
+    function result()
+    {
+        var ans=firstNumber-secondNumber;
+        alert(ans);
+        return ans;
+    }
+    function expand(){
+        document.write("Expanded text");
+    }
+    </script>
+</body>
+</html>

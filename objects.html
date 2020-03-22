@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+</head>
+<body>
+    
+
+    <script >
+        var civic ="x";
+        var car=
+        {
+            model : civic,
+            year :  2018,
+            color : "black",
+            price : "10000",  
+            brand : "Honda"       
+        }
+        car.getDiscount = [50 , 100];
+        car.person=["Officer", "employee"];
+
+        //var post=prompt("enter your post :");
+        //if (post.toLowerCase() === car.person[1])
+        {
+
+            document.write("the price of "+car.brand+" "+car.model+" "+car.year+" is "+car.price+" with "+car.color+" color.But  you are a employee of "+car.brand+" so get "+car.getDiscount[1]+"% discount");
+        }
+        delete car.year;
+        exsist = "year" in car;
+        console.log(exsist);
+
+    </script>
+</body>
+</html>
